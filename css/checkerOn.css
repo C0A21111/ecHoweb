@@ -1,0 +1,347 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  padding:0;
+  margin:0;
+  background-color: #f1ffff
+}
+body form {
+  margin: 0;
+}
+
+/* ヘッダー */
+header {
+  background-color: #00bcd4;
+  display: flex;
+  position: fixed;
+  top: 0px;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  z-index: +10;
+}
+header h2 {
+  padding: 0.5em 1.5em;
+  margin: auto 0;
+  color: #ffffff;
+}
+
+/* ヘッダー用ボタン */
+.header-btn {
+  text-align: right;
+  margin: auto 50px auto  auto;
+}
+.header-btn button:hover {
+  border: 1px solid #ffffff;
+}
+
+/* コンテンツ範囲 */
+.body-layout {
+  text-align: center;
+  margin: 60px auto 0 auto;
+  padding: 1.5em 0;
+}
+
+/* operation用コンテンツ範囲 */
+.body-left {
+  width: 40%;
+  padding: 3em 0 3em 1.5%;
+  float: left;
+  text-align: center;
+  background: #f1ffff;
+}
+.body-right {
+  width: 55%;
+  padding: 1em 1em 1em 0;
+  float: left;
+  text-align: center;
+  background: #f1ffff;
+}
+.center {
+  width: 100%;
+  min-width: 750px;
+  max-width: 1000px;
+  margin: 0 auto auto auto;
+}
+
+/* 青→白ボタン */
+.btn-blue-white {
+  border:none;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  margin: 0.5em;
+  text-decoration: none;
+  background: #00bcd4;
+  border: 1px solid #00bcd4;
+  color: #ffffff;
+  transition: .4s;
+}
+.btn-blue-white:hover {
+  border: 1px solid #00bcd4;
+  background: #ffffff;
+  color: #00bcd4;
+}
+
+/* 白→青ボタン(ホーム以外) */
+.btn-white-blue {
+  border:none;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  margin: 0.5em;
+  text-decoration: none;
+  border: 1px solid #00bcd4;
+  background: #ffffff;
+  color: #00bcd4;
+  transition: .4s;
+}
+.btn-white-blue:hover {
+  background: #00bcd4;
+  border: 1px solid #00bcd4;
+  color: #ffffff;
+}
+
+/* 強制完了ボタン */
+.btn-red {
+  border:none;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  margin: 0.5em;
+  text-decoration: none;
+  border: 1px solid #d40000;
+  background: #d40000;
+  color: #ffffff;
+  transition: .4s;
+}
+.btn-red:hover {
+  background: #df5555;
+  border: 1px solid #df5555;
+  color: #ffffff;
+}
+
+/* ホーム用ボタン */
+.btn-border {
+  border: none;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 3px 16px 3px 20px;
+  margin: 0.7em 0;
+  text-decoration: none;
+  background:#ffffff;
+  color: #000000;
+  transition: .4s;
+}
+.btn-border:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  background:#00bcd4;
+}
+.btn-border:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 4px;
+  height: 100%;
+  top:0;
+  left: 100%;
+  border-radius: 3px;
+  background:#00bcd4;
+}
+.btn-border:hover:before, .btn-border:hover:after {
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+/* 稼働ボタン */
+.btn-border-attention {
+  border: none;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 3px 16px 3px 20px;
+  margin: 0.7em 0;
+  text-decoration: none;
+  background:#ffffff;
+  color:#ea0b0b;
+  transition: .4s;
+}
+.btn-border-attention:before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 3px;
+  background:#ea0b0b;
+}
+.btn-border-attention:after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  width: 4px;
+  height: 100%;
+  top:0;
+  left: 100%;
+  border-radius: 3px;
+  background:#ea0b0b;
+}
+.btn-border-attention:hover:before, .btn-border-attention:hover:after {
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+
+/* operateionのページめくり用 */
+.form-operate {
+  display: flex;
+  margin: 1em auto;
+  justify-content: space-between;
+}
+.btn-operate {
+  margin: 0 10px;
+}
+
+/* ボックス枠線 */
+.box{
+  padding: 2em 4em;
+  margin: 1.5em 0;
+  width: 60%;
+  min-width: 400px;
+  max-width: 500px;
+  display: inline-block;
+  text-align: left;
+  color: #474747;
+  background: #ffffff;
+  border-left: double 7px #4ec4d3;
+  border-right: double 7px #4ec4d3;
+}
+.box p{
+  margin: 1% 20px; 
+  padding: 0;
+}
+
+/* オペレーション用box */
+.box-operation{
+  padding: 2em 2em;
+  margin: 1.5em 0;
+  width: 80%;
+  min-width: 350px;
+  display: inline-block;
+  text-align: left;
+  color: #474747;
+  background: #ffffff;
+  border-left: double 7px #4ec4d3;
+  border-right: double 7px #4ec4d3;
+}
+.box-operation p{
+  margin: 1% 20px; 
+  padding: 0;
+}
+
+/* 指定の番号ジャンプ用box */
+.box-jump {
+  padding: 15px 0;
+  margin: 0.5em auto;
+  width: 80%;
+  /* display: inline-block;
+  text-align: left; */
+  color: #474747;
+  background: #ffffff;
+  border: double 7px #4ec4d3;
+}
+.box-jump p{
+  margin: 0.5em;
+}
+
+/* spanの色 */
+.on-color {
+  background:#ccffbf;
+}
+.off-color {
+  background: #ffbfbf;
+}
+
+/* テーブル */
+.table {
+  width: 80%;
+  max-width: 900px;
+  text-align: center;
+  margin: 1.5em auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.table th {
+  padding: 5px;
+  background: #86dae5;
+  border: solid 1px #778ca3;
+}
+.table td {
+  padding: 5px;
+  background: #ffffff;
+  border: solid 1px #778ca3;
+}
+
+/* Usersテーブル（オペレーション） */
+.users-table-mini {
+  width: 80%;
+  font-size: 12px;
+  max-width: 900px;
+  margin: 0.5em auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.users-table-mini th {
+  padding: 5px;
+  background: #86dae5;
+  border: solid 1px #778ca3;
+}
+.users-table-mini td {
+  padding: 5px;
+  background: #ffffff;
+  border: solid 1px #778ca3;
+}
+
+ /* EachOrdersテーブル（オペレーション） */
+.eachorders-table {
+  width: 90%;
+  font-size: 12px;
+  margin: 1.5em auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.eachorders-table th {
+  padding: 10px;
+  background: #86dae5;
+  border: solid 1px #778ca3;
+}
+.eachorders-table td {
+  padding: 10px;
+  background: #ffffff;
+  border: solid 1px #778ca3;
+}
+
+.p-msg p{
+  margin: 20px 0;
+}
+.text-center {
+  text-align: center;
+}
+.form-size {
+  width: 50px;
+}
+

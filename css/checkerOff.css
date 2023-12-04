@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  padding:0;
+  margin:0;
+  background-color: #ffffff
+}
+
+.body-layout {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/**/
+header {
+  background-color: #00bcd4;
+  width: 100%;
+}
+header h2 {
+  padding: 0.5em 1.5em;
+  color: #ffffff;
+}
+
+/* ボタン */
+.btn-login {
+  border:none;
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  background: #00bcd4;
+  border: 1px solid #00bcd4;
+  color: #ffffff;
+  transition: .4s;
+}
+.btn-login:hover {
+  border: 1px solid #00bcd4;
+  background: #ffffff;
+  color: #00bcd4;
+}
+
+/*ボックス枠線*/
+.box{
+  padding: 0.5em 0;
+  margin: 5em 0 ;
+  width: 60%;
+  min-width: 400px;
+  max-width: 500px;
+  display: inline-block;
+  text-align: center;
+  color: #474747;
+  background: #f1ffff;
+  border-left: double 7px #4ec4d3;
+  border-right: double 7px #4ec4d3;
+}
+.box p{
+  margin: 5% 0; 
+  padding: 0;
+}
