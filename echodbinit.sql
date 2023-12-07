@@ -6,8 +6,7 @@ create table echodb.checkers(
 );
 
 insert into checkers(checker_id,checker_name,checker_password) values
-(null,'orner','pass'),
-(null,'staff','pass');
+(null,'orner','');
 
 create table echodb.items(
     item_id int primary key auto_increment,
@@ -66,10 +65,10 @@ update users set status=2 where docked_number > 13 and docked_number <= 38;
 update users set status=1 where docked_number > 38 and docked_number <= 40;
 -- update users set status=0 where docked_number > 29;
 
--- update users set status=3 where docked_number <= 38;
--- update users set status=3 where docked_number = 39;
--- update users set status=1 where docked_number = 40;
-update users set status=3 where docked_number <= 40;
+update users set status=3 where docked_number <= 38;
+update users set status=3 where docked_number = 39;
+update users set status=1 where docked_number = 40;
+-- update users set status=3 where docked_number <= 40;
 
 create table echodb.orders(
     order_id int primary key auto_increment,
