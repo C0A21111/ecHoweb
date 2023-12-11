@@ -1,8 +1,13 @@
 import java.io.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
-
 @WebServlet("/ConfirmCancellation")
 public class ConfirmCancellationServlet extends HttpServlet {
     public void doPost(HttpServletRequest req, HttpServletResponse res)

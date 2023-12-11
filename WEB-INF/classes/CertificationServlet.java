@@ -1,11 +1,15 @@
 import java.io.*;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 
 import DAO.CheckersDAO;
-
-import javax.servlet.annotation.*;
 
 import bean.CancelledDTO;
 import bean.CheckersDTO;
@@ -33,7 +37,7 @@ public class CertificationServlet extends HttpServlet {
             String name = req.getParameter("checker_name");
             String password = req.getParameter("checker_password");
             CheckersDAO cdao = new CheckersDAO();
-            CheckersDTO cdto;
+            CheckersDTO cdto = new CheckersDTO();
             cdto = cdao.login(name, password);
             if (cdto.get(0).getId() != 9999) { // 見つかった
                 // id,name,passのArrayListをsessionに格納
