@@ -11,6 +11,7 @@ public class CheckersDAO {
 
     public void connect() {
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(URL, USER, PASS);
         } catch (Exception e) {
             e.printStackTrace();
