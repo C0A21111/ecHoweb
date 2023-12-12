@@ -1,10 +1,5 @@
 import java.io.*;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -23,12 +18,10 @@ public class ShowStockServlet extends HttpServlet {
 
         ServletContext application = req.getServletContext();
 
-        // CheckersDAOオブジェクトを生成
+        // ItemsDAOオブジェクトを生成
         ItemsDAO idao = new ItemsDAO();
-
         ItemsDTO idto;
         idto = idao.select();
-
         application.setAttribute("idto", idto);
 
         // JSPにフォワード

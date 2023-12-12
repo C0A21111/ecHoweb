@@ -1,10 +1,5 @@
 import java.io.*;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -54,6 +49,7 @@ public class ManageStockServlet extends HttpServlet {
 
             case "新規商品追加":
                 idao.insert(name, price);
+                application.setAttribute("obj_count", idto.size());
                 break;
 
             case "在庫更新":
@@ -72,6 +68,7 @@ public class ManageStockServlet extends HttpServlet {
 
             case "商品削除":
                 idao.delete(id);
+                application.setAttribute("obj_count", idto.size());
                 break;
 
         }

@@ -1,16 +1,10 @@
 import java.io.*;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
 import DAO.CheckersDAO;
-
 import bean.CancelledDTO;
 import bean.CheckersDTO;
 
@@ -23,15 +17,6 @@ public class CertificationServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");
         String forwardURL = "/loginFailed.html";
 
-        // テスト用
-        ServletContext application = getServletContext();
-        CancelledDTO cancelled_number = new CancelledDTO();
-        application.setAttribute("registered_number", 40);
-        application.setAttribute("foremost_1", 41);
-        application.setAttribute("obj_count", 25);
-        application.setAttribute("cancelled_number", cancelled_number);
-        session.setAttribute("pwd_number", 1);
-
         // ログインページから
         if (session.getAttribute("loginpassed") == null) {
             String name = req.getParameter("checker_name");
@@ -40,6 +25,16 @@ public class CertificationServlet extends HttpServlet {
             CheckersDTO cdto = new CheckersDTO();
             cdto = cdao.login(name, password);
             if (cdto.get(0).getId() != 9999) { // 見つかった
+
+                // テスト用
+                ServletContext application = getServletContext();
+                CancelledDTO cancelled_number = new CancelledDTO();
+                application.setAttribute("registered_number", 0);
+                application.setAttribute("foremost_1", 0);
+                application.setAttribute("obj_count", 0);
+                application.setAttribute("cancelled_number", cancelled_number);
+                session.setAttribute("pwd_number", 1);
+
                 // id,name,passのArrayListをsessionに格納
                 session.setAttribute("loginpassed", cdto.get(0));
                 forwardURL = "/checkerHome.jsp";

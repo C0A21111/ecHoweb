@@ -1,10 +1,5 @@
 import java.io.*;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -61,7 +56,7 @@ public class RestartServlet extends HttpServlet {
                     application.removeAttribute("idto");
                     application.removeAttribute("obj_count");
                     application.removeAttribute("cancelled_number");
-                    application.removeAttribute("registered_number");
+                    application.setAttribute("registered_number", 40);
                     application.removeAttribute("foremost_1");
                     break;
 
