@@ -4,9 +4,9 @@ import java.sql.*;
 import bean.*;
 
 public class ItemsDAO {
-    private final String URL = "";
-    private final String USER = "";
-    private final String PASS = "";
+    private final String URL = "jdbc:mysql://echodb/echodb";
+    private final String USER = "root";
+    private final String PASS = "teLnr1729";
     private Connection con = null;
 
     public void connect() {
@@ -22,7 +22,7 @@ public class ItemsDAO {
         Statement stmt = null;
         ResultSet rs = null;
         ItemsDTO idto = new ItemsDTO();
-        String sql = "SELECT * FROM Items";
+        String sql = "SELECT * FROM items";
         try {
             connect();
             //
